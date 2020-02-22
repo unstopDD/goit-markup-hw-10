@@ -1,0 +1,55 @@
+.top-header {
+  background-color: $primary-color;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.top-nav {
+  display: flex;
+}
+.contact-info {
+  display: flex;
+  font-family: $secondary-font-stack;
+  font-size: 14px;
+  line-height: 11px;
+  font-weight: 300;
+}
+
+.contact-info__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding-right: 35px;
+  color: $color-white;
+}
+
+.contact-info__icon {
+  width: 20px;
+  height: 20px;
+  fill: $color-white;
+}
+
+.login-menu {
+  display: flex;
+  margin-left: auto;
+  font-family: $secondary-font-stack;
+  font-size: 14px;
+  line-height: 11px;
+  font-weight: 300;
+}
+.login-menu__link {
+  display: block;
+  text-decoration: none;
+  color: $color-white;
+}
+.login-menu__list {
+  padding-left: 15px;
+  padding-right: 15px;
+  &:nth-last-child(1) {
+    padding-right: 0;
+  }
+}

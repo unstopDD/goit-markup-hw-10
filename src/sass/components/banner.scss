@@ -1,0 +1,66 @@
+.banner {
+  height: 600px;
+  background-image: url(../images/slide4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner__name {
+  margin: 0;
+  padding: 0;
+  color: $color-white;
+  font-size: 48px;
+  line-height: auto;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.banner__name--and {
+  color: $secondary-color;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.banner__info {
+  margin: 0;
+  padding: 0;
+  color: $color-white;
+  font-size: 48px;
+  line-height: auto;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: $tertiary-font-stack;
+  margin-bottom: 20px;
+}
+.banner__info--sale {
+  margin: 0;
+  padding: 0;
+  color: $secondary-color;
+  font-size: 48px;
+  line-height: auto;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: $tertiary-font-stack;
+}
+.bunner__button {
+  display: flex;
+  height: 40px;
+  width: 120px;
+  background-color: $secondary-color;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: auto;
+  color: $color-white;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  &:hover {
+    opacity: 0.6;
+  }
+}

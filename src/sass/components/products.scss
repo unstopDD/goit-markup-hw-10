@@ -1,0 +1,120 @@
+.main {
+  color: $prymary-text-color;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 32px;
+  text-transform: uppercase;
+  margin-bottom: 105px;
+}
+.main__header {
+  padding-top: 94px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.main__header::after {
+  display: inline-block;
+  content: '';
+  width: 165px;
+  height: 15px;
+  background-image: url(../images/header.png);
+  position: absolute;
+  top: 125%;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.products__list {
+  display: flex;
+  width: 255px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.products__list:nth-child(4n) {
+  margin-right: 0px;
+}
+
+.products__list:nth-last-child(-n + 4) {
+  margin-bottom: 0px;
+}
+
+.products__link {
+  text-decoration: none;
+  display: flex;
+  align-items: flex-end;
+  width: 255px;
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+  &:hover .products__descr {
+    background-color: $primary-color;
+  }
+  &:hover .product__price {
+    background-color: $price-color-hover;
+  }
+  &::before {
+    content: '';
+    width: 235px;
+    height: 260px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    transform: translateY(150%);
+    transition: transform 250ms;
+  }
+  &:hover::before,
+  &:focus::before {
+    transform: translateY(0);
+  }
+}
+
+.products__descr {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 15px;
+  font-weight: 900;
+  font-size: 18px;
+  background-color: $primary-bacground-color;
+  width: 200px;
+  height: 40px;
+  position: absolute;
+  color: $color-white;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product__price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 900;
+  font-size: 18px;
+  background-color: $price-background-color;
+  width: 55px;
+  height: 40px;
+  position: absolute;
+  left: 78%;
+  color: $color-white;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.products__link:hover .actions,
+.products__link:focus .actions {
+  opacity: 1;
+}

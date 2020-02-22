@@ -1,0 +1,109 @@
+.main-collection {
+  background-color: $sections-background-color;
+  padding-bottom: 75px;
+  padding-top: 100px;
+}
+.main-collection__header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.main-collection__header::after {
+  display: inline-block;
+  content: '';
+  width: 165px;
+  height: 15px;
+  margin-top: 30px;
+  background-image: url(../images/header.png);
+  position: absolute;
+  top: 125%;
+}
+.new-collectoin {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.new-collectoin__item {
+  margin-right: 30px;
+  position: relative;
+  overflow: hidden;
+  &:nth-last-child(1) {
+    margin-right: 0;
+  }
+}
+
+.overlay {
+  display: flex;
+}
+.new-collectoin__link {
+  width: 255px;
+  border: 0;
+  &::before {
+    content: '';
+    width: 235px;
+    height: 260px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    transform: translateY(150%);
+    transition: transform 250ms;
+  }
+  &:hover::before,
+  &:focus::before {
+    transform: translateY(0);
+  }
+  &:hover .new-collectoin__descr,
+  &:focus .new-collectoin__descr {
+    background-color: $primary-color;
+  }
+  &:hover .new-collectoin__price,
+  &:focus .new-collection__price {
+    background-color: $price-color-hover;
+  }
+}
+
+.new-collectoin__descr {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 15px;
+  font-weight: 900;
+  font-size: 18px;
+  background-color: $primary-bacground-color;
+  width: 200px;
+  height: 40px;
+  color: $color-white;
+  position: absolute;
+  left: 0%;
+  top: 87.5%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.new-collectoin__price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 900;
+  font-size: 18px;
+  background-color: $price-background-color;
+  width: 55px;
+  height: 40px;
+  color: $color-white;
+  position: absolute;
+  left: 100%;
+  top: 87.5%;
+  transform: translateX(-100%);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.new-collectoin:hover .actions,
+.new-collectoin:focus .actions {
+  opacity: 1;
+}
